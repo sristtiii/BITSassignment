@@ -15,6 +15,8 @@ Needs: load data, tokenize, load model, fine-tune/infer, evaluate, 5+ custom pre
 
 - Section 0 done: imports (torch, numpy, load_dataset) and GPU check run, GPU True on T4. Learned the `from X import Y` order after the SyntaxError hint. Understands fine-tuning = adapting a pretrained model; partly got "why not from scratch" (effort), needs the data and compute reason.
 
+- Section 1 in progress: loaded the dataset with load_dataset("nyu-mll/glue", "stsb"). Splits: train 5749, validation 1500, test 1379. Learned that after a Colab restart you rerun cells from the top. Printed 3 examples from each split. Labels are floats (5.0, 3.8, 4.75); test labels are all -1.0 (hidden). Fixed `.shape()` to `.shape` after the "dict not callable" error. Train labels run from 0.0 to 5.0. SECTION 1 DONE. User found section 2 overwhelming and asked for the concept explained first, then coding hands-on. Next: explain tokenization, then one tiny step at a time.
+
 ## Weak spots
 - Has never trained a model (so training loops, loss, epochs are new).
 - Hasn't used PyTorch / Hugging Face / pandas yet.
@@ -28,8 +30,8 @@ Needs: load data, tokenize, load model, fine-tune/infer, evaluate, 5+ custom pre
 ## Plan (5-day deadline, heavy workload, so go as far as possible each session)
 Order matters because each chunk builds on the one before. Tick items off as we finish them.
 - [x] 0. Warm-up: confusion-matrix formulas (done: precision 0.8, recall 40/60, accuracy 0.7)
-- [ ] 1. Foundations recap: loss, training loop, embeddings, why BERT
-- [ ] 2. Data: load STS-B, inspect it, tokenize
+- [x] 1. Foundations recap (covered training step, gradient, fine-tuning; embeddings still to come)
+- [ ] 2. Data: load STS-B (done), inspect it (done), tokenize (next)
 - [ ] 3. BERT fine-tune and evaluate (hardest chunk, on a Colab GPU)
 - [ ] 4. MiniLM, same pipeline
 - [ ] 5. Metrics: regression vs classification issue, then compare the models
