@@ -1,0 +1,31 @@
+The objective of this assignment is to implement a Transformer-based NLP model for the given task using Hugging Face libraries. Students will fine-tune or evaluate the specified model(s), report performance, and analyze the results.
+
+## Task
+Sequence pair classification
+
+## Description
+Fine-tune a model for semantic textual similarity as a regression problem. Predict similarity score between two sentences.
+
+## Dataset
+Use the following Hugging Face dataset: glue, stsb
+
+## Models to be Used
+Use the following model(s): bert-base-uncased, sentence-transformers/all-MiniLM-L6-v2
+If more than one model is listed, compare their performance.
+
+## Implementation Requirements
+Students must implement:
+1. Dataset loading using Hugging Face `datasets`
+2. Data preprocessing and tokenization
+3. Model loading using Hugging Face `transformers`
+4. Fine-tuning or inference pipeline
+5. Evaluation using the required metric(s)
+6. Prediction on at least 5 custom examples
+7. Error analysis
+
+## Metric
+Evaluate the model using:
+Accuracy
+Precision
+Recall
+F1-Score
