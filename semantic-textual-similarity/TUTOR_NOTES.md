@@ -42,6 +42,7 @@ Rule: save the Colab notebook often. Use a GPU runtime.
 
 ## Files
 - gradient_descent_warmup.ipynb: deleted at the user's request. The warm-up loop was dropped.
+- STSB_skeleton.ipynb: the working notebook (Modules 1-3 done with outputs and code comments; Modules 4-10 still TODO placeholders).
 - STSB_assignment_template.ipynb: assignment outline. Text sections only, all code cells empty. User writes all the code themselves. Run it in Colab with a GPU.
 
 ## How the user wants to work
@@ -50,3 +51,5 @@ Rule: save the Colab notebook often. Use a GPU runtime.
 ## Progress log
 - Session 1: read the assignment, set up these notes.
 - Session 1: user answered the background questions. Deadline is in 5 days and their other workload is heavy. Waiting on a decision about pacing.
+- Session 2: Module 1 (installs, imports, GPU check) done. Module 2 done: confusion-matrix metrics written three ways (loop, numpy masks, function with zero-division guards and an all-zero edge case) and cross-checked against sklearn (0.75 on all four; 0.5/0/0/0 on the edge case). Module 3 done: loaded nyu-mll/glue stsb (train 5749, validation 1500, test 1379, test labels hidden = -1), train label mean 2.70, 52.1% of labels >= 3.0 (so a 3.0 threshold gives balanced classes). Next: Module 4 (tokenization). Known loose ends: the metrics dict key "recall " has a trailing space, and the sklearn cell reuses the name compute_metrics. Switch the Colab runtime to a T4 GPU before fine-tuning.
+- Weak spots seen in session 2: Colab only shows the last expression in a cell; dict braces vs f-string braces; reusing a function name overwrites it; mixing up the validation and test roles.
